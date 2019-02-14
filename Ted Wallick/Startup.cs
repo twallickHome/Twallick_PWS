@@ -51,6 +51,8 @@ namespace Ted_Wallick
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
+                app.UseBrowserLink();
+
             }
             else
             {
