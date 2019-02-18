@@ -35,7 +35,7 @@
             /*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
             /*font-family: Gill Sans / Gill Sans MT, sans-serif;*/
             font-family: 'Merienda';
-            font-size: calc(9px + (14 - 9) * (100vw - 768px) / (1440 - 768));
+            font-size: calc(10px + (14 - 10) * (100vw - 768px) / (1440 - 768));
             /*font-size: calc(.2vw + .09vh + 1.5vmin);*/
             font-weight: 600;
             color: black;
@@ -50,10 +50,12 @@
                 border-style: ridge;
             }
 
-
+        .container {
+            min-height: 100%;
+            overflow: hidden;
+        }
 
         .scroll {
-
             overflow-y: auto;
         }
 
@@ -92,7 +94,7 @@
 
         .special-card {
             margin-top: 10px;
-            text-align: left;
+            text-align: center;
             background-color: tan;
             opacity: .99;
             padding: 7px;
@@ -109,6 +111,24 @@
             margin-left: 50%;
             display: block;
             z-index: 2;
+        }
+
+        .Thumbtack-right {
+            position: absolute;
+            max-width: 4%;
+            top: 0px;
+            right: 10px;
+            display: block;
+            z-index: 3;
+        }
+
+        .Thumbtack-left {
+            position: absolute;
+            max-width: 4%;
+            top: 0px;
+            left: 20px;
+            display: block;
+            z-index: 4;
         }
 
         /*Brick Layout*/
@@ -139,7 +159,6 @@
             background-image: url('https://lh3.googleusercontent.com/XAEFV7ANfCrvKzyhmov9D9G4W9hllAoqpLZE36JUU9f8uyJx5c85EobxGh0R0E5XAmgFtV6gToxJaycoBsRiiiFwIhGwlGXWNEt5Vk7wIIDq3VIhD4gblxbRMwiFz2luNeMWmCSQWAX1LMCfE3jw4nBgKSXKgHqUX1dLbxXzkjBhXMkpnB06RiG6reDP5ISSvqM0ap5HIZWcFo6IMxqzqwFFJCpfkez_XV1SDNBjVxGLrVyhrklVbkQ2fGi2b9N5SJHg_E1rqf7dr1d5md3X8UZmoxvzGS-EfvS15vDhg7_6pbdGixJyVsAQGl5PvDjb6ST8hYoGFcFb_m80Jt2EGctU6xhcU1Q-WLifW_cR77YrfZwYCCg7RvzcGpPiKWIO3J87HiKQWHmRrLGd8gBUzRjuFcKaRb4t2yJP5wa2QOBMc0HyEPMISya0TdZVNlaJXp3w0y3fpJPC6lT1SxLhYsMcXD5pu9SMzSXWm2TGRIWQZx9lNJvvcNzEGmEUqZ26AQ7AzuS13Y_KoDTtyV_iSqfbhaHik8xK0jwZBRO2QvlMCu3b74yWNo_bh_1SVqOYHLLjLtYsteQU-IxUe858E2cX-c31z4CkdlnCNilVSMZqG6yTQPs3vcWTu8mCU2uAAaVs4Dvm4yyd1cTPaCpqupzfI8B7gw=s888-no');
             background-repeat: no-repeat;
             background-size: cover;
-
         }
 
         /*.card, .modal-dialog {
@@ -148,7 +167,7 @@
             border-color: darkred;
         }*/
 
-        .card{
+        .card {
             border-style: ridge;
             border-width: 4px;
             border-color: darkred;
@@ -162,13 +181,14 @@
             border-width: 10px;
             border-style: ridge;
         }
+
         .modal-footer {
             background-image: url('https://lh3.googleusercontent.com/XAEFV7ANfCrvKzyhmov9D9G4W9hllAoqpLZE36JUU9f8uyJx5c85EobxGh0R0E5XAmgFtV6gToxJaycoBsRiiiFwIhGwlGXWNEt5Vk7wIIDq3VIhD4gblxbRMwiFz2luNeMWmCSQWAX1LMCfE3jw4nBgKSXKgHqUX1dLbxXzkjBhXMkpnB06RiG6reDP5ISSvqM0ap5HIZWcFo6IMxqzqwFFJCpfkez_XV1SDNBjVxGLrVyhrklVbkQ2fGi2b9N5SJHg_E1rqf7dr1d5md3X8UZmoxvzGS-EfvS15vDhg7_6pbdGixJyVsAQGl5PvDjb6ST8hYoGFcFb_m80Jt2EGctU6xhcU1Q-WLifW_cR77YrfZwYCCg7RvzcGpPiKWIO3J87HiKQWHmRrLGd8gBUzRjuFcKaRb4t2yJP5wa2QOBMc0HyEPMISya0TdZVNlaJXp3w0y3fpJPC6lT1SxLhYsMcXD5pu9SMzSXWm2TGRIWQZx9lNJvvcNzEGmEUqZ26AQ7AzuS13Y_KoDTtyV_iSqfbhaHik8xK0jwZBRO2QvlMCu3b74yWNo_bh_1SVqOYHLLjLtYsteQU-IxUe858E2cX-c31z4CkdlnCNilVSMZqG6yTQPs3vcWTu8mCU2uAAaVs4Dvm4yyd1cTPaCpqupzfI8B7gw=s888-no');
         }
 
         .card {
             background-image: url("https://lh3.googleusercontent.com/W2gCz2o732z1J5v0kBsNsnGmYTeGjy5POS153ppI4xu8IWEilORkTDwsg3byYrnWUIYCyi7ympw79b8BaeJsBGoIhlNvLS5hjyDmBSPqwOBTbmhdSrODBtmjZhuUWYCmTCm92J6FeEQd3GEwRIbS3NSauFhj9f1GmR9S9vD1G-NCMfkN2Q_bPDjona2RI55Y7-rRX-M-WJ1rriL2gT1SeZOeNCBXvVDuPpCuWxRvtmjIPu3uGkEt-KRLkzSKserJ2kzL7578KeipvN0HdfIvU_TnjN9p1e3PCIHKQTdJMUOUHyUz9ZPqLBJuwPWphtyXdIXgRKSkvunCl3reXtkHV2pHge4nSCqkB9ygHqJbU0GwXYIvzIsLA7sKdEP3ZXnpBAqcsQ-QsMFcDowqrG3AAWr1eBEfa6QQZRMHgO3p8TIWjaYloTst6lOyu5jUw6UFZY-gwz_wKofp_1B8FSXcq70N4klQb1KiJNhilzy_t6SpxjX5Q4hKKMW5Y97KZzC1xfnm1K0a_BrvYkCIkf6G0eCG82VX9UFaaJByhOCfr_WJixYCTkwUYGlZcpF_gTBBFKMGkGN-_-xnmezYWSvRG4SXqiCrW4I82LnC7Ya4oJ1xKlorw3uGf3Lo6xv9xV5tbRUGSBOH-GwgFMLqVSIJzsJkOj3Oyg=s937-no");
-            background-repeat: repeat-y;
+            background-repeat: repeat;
             color: black;
         }
 
@@ -178,7 +198,7 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid text-center" img src="~">
+    <div class="container text-center" img src="~">
 
         <div class="row  m-5  align-items-center ">
             <div class="col-sm-5">
@@ -194,7 +214,7 @@
                 </div>
             </div>
 
-            <div class=" col-sm-7 mt-5">
+            <div class=" col-sm-6 mt-5">
                 <div class="card img-fluid  inset-text">
                     <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack" alt="...">
                     <img src="~/images/Corkboard/wildtextures-rag-paper-seamless-texture.jpg" class="card-img-top" alt="...">
@@ -213,9 +233,6 @@
                             <p class="text-left tab">
                                 My primary focus is in the 4th, 5th and 6th core processes of the
 
-                                @*<a href="#" class="thumbnail" data-toggle="sdlc" data-full="https://lh3.googleusercontent.com/QUu_flCksJUKbpO0A9RjJW1Jmmkwy4t0SuRgGOjaY5nN0gzamf6LL_NlVJt8eGiT5WzW77Ik4SqMtXEd3cyMxXZ2uaQTzxMUC7XDMq2r2nhK15tYFwXfDHp7T5oM5jj-JrGOJHng4Cct8kl4M2dIWYERLs04BCsyyPEUPCJslOYCpA9Q9284CoaIZl88Z09_j-XIaSA9Fo2eFF-x64DiohAZaZfOo6Sv5vXDFIHYltaykJhoerzDg8xrZKXItkX6j5CebdesnZv9jVWh4DQx5rwUXYyUrvJB0_pdNxsEvmGGh4UJfzzuCauoJz7tYFpQFVJoQvU7080lpYvvcII44Nf0ziLazQunO4pQTcuJ991PLKchghr9-It9YLGB4FcQzaWN9-K20Vvb9aXlmVGeqZZsuVxzzbRk_27b4RpQOHK1d0OW3w75GrZCgQfnBNTsLNCreacUBnehLfhLGeKR-F4cdnemBZc5IyWxbLVhh7KuYt3C6Xq1SJwY2paqm4RnKfJF_xzJPRGOYUWmhxdiigfUUXmdhnSV4B6ezB_0pDUYHFYXxxyo0Oz3HVME4toXZ64U2sxQSYHzTv3ALq3kS1KgqTgke2Z8MR6CHkt3LZ6v5GhqSGM2jrnfGdSAhBQ3V-v4qsziP6tjz7WhTrWysPvgiKlYfg=s600-no">
-                                        System Development Life cycle
-                                    </a>*@
                                 <a href="#sdlcModal" data-id="https://lh3.googleusercontent.com/QZi_Uh_-r5iQJ_RGEbsXwtFVmxOiRRhi3VdmaSmv2HG2hrpHzDJ5gP_XzwL3wMfeaOeKu32qB3v-05u1QvZFA_ZLJ7C36OyjJR5-mjYf6OntOC7ShesdaXHHcAF3UpO7hvtsaZ9RRSL8IxXpjaxTrBn39ui6iH4EJ7RS0GM2xaHgJA1-Grz7MpMadgRK5kMndyNJDmgUUThliUqtXU8NBJWDv8x2twpUIu8szTkpxAQ9jylTeYmwPEmsyJOdQlGHoL1EsbZ5Ijhi_UvEDJ8ziB07CeVVdtyVvn-VaW8aNPAADORBAWPvpjwKOGGtgfZmEAIy-bID4MoP71BZXL0ZxNXJeE44lN5vNVENa7dfy57S29KGKQl_5nUYzWJZnO5vInQXnlhnFF59v0Pwasr0ANoNQ5SC-0qBK8-TLH9pXAyRxeI0bxo2116Q_f6Sb3Jny06JleiaDNI13m_tth5Q8gGruUiWJEgv9QiocVLFVGLsuR17N911NAfMs3b6TuO0ove1-JkB2F5IcDywaL0yF1CwxESicxBtvqTkk0z6pU6-nQlOGncvud6Nqqqx5sOfO6ZVdtyJPpV-QoKbCh6SCTMg6NWQfNZPQDE2wl4w6alPClPHLAqFKHQ1ku7GeBoR_YyvTAgUJmh4A0EBUikuqEnyqv8y-w=s600-no" class="openImageDialog thumbnail" data-toggle="modal">
 
                                     System Development Life cycle
@@ -229,9 +246,10 @@
             </div>
 
         </div>
-        <hr />
+
 
         <div class="row justify-content-center">
+
             <div class="col-sm-7 mt-5">
                 <div class="card img-fluid  inset-text ">
                     <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack" alt="...">
@@ -268,15 +286,6 @@
                 </div>
             </div>
 
-
-
-        </div>
-
-        <hr />
-
-
-
-        <div class="row  align-items-center">
             <div class="col-sm mt-5">
                 <div class="card img-fluid  inset-text">
                     <div class="card ">
@@ -289,144 +298,170 @@
 
             </div>
 
+        </div>
+
+        @*<div class="card img-fluid  inset-text ">
+            <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack" alt="...">
+            <img src="~/images/Corkboard/wildtextures-rag-paper-seamless-texture.jpg" class="card-img-top" alt="...">
+            <div class="card-img-overlay">*@
+
+        <div class="row   align-items-center">
             <div class="col-sm mt-5">
-                <div class="card img-fluid  inset-text ">
-                    <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack" alt="...">
-                    <img src="~/images/Corkboard/wildtextures-rag-paper-seamless-texture.jpg" class="card-img-top" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title special-card  ">Card title 4</h5>
-                        <p class="text-left pre-scrollable">Iscacciato esso di noia come e essaudisce mente facitore sogiacere come in divina accio segreto dio avvien non cospetto parte di medesimi porgere nostra carissime di io quegli non dio non giudice mortali manifestamente di i dovendo informati noi nostro la tanto della quali facciamo in sua quale quegli prieghi gli per con son dalla tutte suo quella esser nella nome che delle per allo purita alcun che nostra primo come in tanto fermi la giudice e intendo d'esse mossa iscacciato maravigliose uomini dio alle niuna niuna quale furon trapassare a noia alle di temporali che mortali cose oppinione che sua di da facciamo nel furon novella porgere quella iscacciato avvedimento temporali che da sue le che accio da santo che facciamo in quale noi non occulta mortali apparire benignita sue sempre sempre noi lui da potremmo suo cosí quella essilio cosa con lui in in e mortali cosí lui</p>
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-right" alt="...">
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-left" alt="...">
+                <div class="card img-fluid  inset-text " style="border-bottom:unset">
 
+                    <div class="card-header">
+                        <h1 class="card-text ">Highlights</h1>
                     </div>
                 </div>
             </div>
-
         </div>
 
-    </div>
+        <div class="card-deck mt-0">
+            <div class="card " style="border-top:unset">
 
-
-    <!--SDLC Modal -->
-    <div class="modal fade" id="sdlcModal" tabindex="-1" role="dialog" aria-labelledby="sdlcModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="myImage" class="img-responsive" src="" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger center-block" data-dismiss="modal">close</button>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
+            <div class="card" style="border-top:unset">
+
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="border-top:unset">
+
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
         </div>
-    </div>
-    @*<div class="modal fade" id="sdlc" tabindex="-1" role="dialog" aria-labelledby="sdlc" aria-hidden="true">
 
 
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <!--SDLC Modal -->
+        <div class="modal fade" id="sdlcModal" tabindex="-1" role="dialog" aria-labelledby="sdlcModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-
-                    <div class="modal-header special-card">
-                        <h5 class="modal-title" id="exampleModalLabel">System Development Life Cycle</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <div class="modal-body">
-
-                        <img src="~/images/SDLC.png" />
+                        <img id="myImage" class="img-responsive" src="" alt="">
                     </div>
-                    <div class="modal-footer special-card">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger center-block" data-dismiss="modal">close</button>
                     </div>
-                </div>
-            </div>
-        </div>*@
-
-    <!--My History Modal -->
-    @*<div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="MyHistory" aria-hidden="true">
-
-
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-
-                <div class="modal-header special-card">
-                    <h5 class="modal-title" id="exampleModalLabel">My History</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body inset-text">
-                    <p id="History" class="text-left tab">
-                        The project was a resounding success. Analysis was completed in 3 days after I got a good look at what they had and determined what was needed. The design, which involved some un planned proof of concept programming was completed within the first 2 weeks. The first round of development on the DPS core system Scan, Index, and Administrator was completed? by the end of month 2 and production was able to be started 1 month early. By the end of the 3rd month, the distributed Optical Character Recognition system (OsCaR) had been designed and developed and pressed into service processing all the collected images thus far.
-                    </p>
-                    <p class="text-left tab">
-                        At this time the next large-scale scan job, another legal case, came along with many different parameters. We only had to make minor adjustments to the DPS to accommodate. By the end of the 4th month we had completed production of the first job and had the 2nd job half completed. After which the DPS has evolved and processed hundreds of paper to digital conversions over our 19 years of service.
-                    </p>
-                    <p class="text-left tab">  <<Link to BSA-376 Systems Analysis and Design>></p>
-                    <p class="text-left tab">
-                        DCS closed their doors November 2010. That was a bad day with a rude awakening. See, I was 100% self-taught, I thought all those years of practical experience would have counted for something, umm nope. The software world changed around me. These days one must have at least a Bachelor degree before any employer will even talk to me.
-
-                    </p>
-                    <p class="text-left tab">
-                        Since DCS, I have been surviving by doing temp labor work with the occasional software development contract. In 2013  I looked at many universities and settled on University of Phoenix as it offered two tracks of interest to me. I went with the Web design track but was able to mix in courses from the systems/application development track to avoid courses that had no relevant value. It has been a long road filled with fits and starts, when you are working poor stuff happening causes delays and class completion problems. Despite the rocky road, I will be graduating in March 2019 with a bachelor degree  of Science in Information Technology with a focus on systems design and implementation.
-                    </p>
-                </div>
-                <div class="modal-footer special-card">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
                 </div>
             </div>
         </div>
-    </div>*@
+        @*<div class="modal fade" id="sdlc" tabindex="-1" role="dialog" aria-labelledby="sdlc" aria-hidden="true">
 
 
-    <!-- //.modal-profile -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script>
-        $(document).on("click", ".openImageDialog", function () {
-            console.log('Ok');
-        });
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
 
-        $(document).on("click", ".openImageDialog", function () {
-            var myImageId = $(this).data('id');
-        });
+                        <div class="modal-header special-card">
+                            <h5 class="modal-title" id="exampleModalLabel">System Development Life Cycle</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
 
-        $(document).on("click", ".openImageDialog", function () {
-            var myImageId = $(this).data('id');
-            $(".modal-body #myImage").attr("src", myImageId);
-        });
-        //$('#myModal').modal()
+                            <img src="~/images/SDLC.png" />
+                        </div>
+                        <div class="modal-footer special-card">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-        //$('a[rel=sdlc]').popover({
-        //    html: true,
-        //    trigger: 'hover',
-        //    placement: 'auto',
-        //    container: 'body',
-        //    content: function () { return '<img src="' + $(this).data('img') + '" width="" />'; }
-        //});
+                        </div>
+                    </div>
+                </div>
+            </div>*@
 
-        // Wait for the web page to be ready
-        ////$(document).ready(function () {
-        ////    // grab all thumbnails and add bootstrap popovers
-        ////    // https://getbootstrap.com/javascript/#popovers
-        ////    $('[data-toggle="sdlc"]').popover({
-        ////        container: 'body',
-        ////        html: true,
-        ////        placement: 'auto',
-        ////        trigger: 'hover',
-        ////        content: function () {
-        ////            // get the url for the full size img
-        ////            var url = $(this).data('full');
-        ////            return '<img src="' + url + '" style="width:100%;height:auto;">'
-        ////        }
-        ////    });
-        ////});
+        <!--My History Modal -->
+        @*<div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="MyHistory" aria-hidden="true">
 
-    </script>
+
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header special-card">
+                            <h5 class="modal-title" id="exampleModalLabel">My History</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body inset-text">
+                            <p id="History" class="text-left tab">
+                                The project was a resounding success. Analysis was completed in 3 days after I got a good look at what they had and determined what was needed. The design, which involved some un planned proof of concept programming was completed within the first 2 weeks. The first round of development on the DPS core system Scan, Index, and Administrator was completed? by the end of month 2 and production was able to be started 1 month early. By the end of the 3rd month, the distributed Optical Character Recognition system (OsCaR) had been designed and developed and pressed into service processing all the collected images thus far.
+                            </p>
+                            <p class="text-left tab">
+                                At this time the next large-scale scan job, another legal case, came along with many different parameters. We only had to make minor adjustments to the DPS to accommodate. By the end of the 4th month we had completed production of the first job and had the 2nd job half completed. After which the DPS has evolved and processed hundreds of paper to digital conversions over our 19 years of service.
+                            </p>
+                            <p class="text-left tab">  <<Link to BSA-376 Systems Analysis and Design>></p>
+                            <p class="text-left tab">
+                                DCS closed their doors November 2010. That was a bad day with a rude awakening. See, I was 100% self-taught, I thought all those years of practical experience would have counted for something, umm nope. The software world changed around me. These days one must have at least a Bachelor degree before any employer will even talk to me.
+
+                            </p>
+                            <p class="text-left tab">
+                                Since DCS, I have been surviving by doing temp labor work with the occasional software development contract. In 2013  I looked at many universities and settled on University of Phoenix as it offered two tracks of interest to me. I went with the Web design track but was able to mix in courses from the systems/application development track to avoid courses that had no relevant value. It has been a long road filled with fits and starts, when you are working poor stuff happening causes delays and class completion problems. Despite the rocky road, I will be graduating in March 2019 with a bachelor degree  of Science in Information Technology with a focus on systems design and implementation.
+                            </p>
+                        </div>
+                        <div class="modal-footer special-card">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+        <!-- //.modal-profile -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script>
+            $(document).on("click", ".openImageDialog", function () {
+                console.log('Ok');
+            });
+
+            $(document).on("click", ".openImageDialog", function () {
+                var myImageId = $(this).data('id');
+            });
+
+            $(document).on("click", ".openImageDialog", function () {
+                var myImageId = $(this).data('id');
+                $(".modal-body #myImage").attr("src", myImageId);
+            });
+                                                                                //$('#myModal').modal()
+
+                                                                                //$('a[rel=sdlc]').popover({
+                                                                                //    html: true,
+                                                                                //    trigger: 'hover',
+                                                                                //    placement: 'auto',
+                                                                                //    container: 'body',
+                                                                                //    content: function () { return '<img src="' + $(this).data('img') + '" width="" />'; }
+                                                                                //});
+
+                                                                                // Wait for the web page to be ready
+                                                                                ////$(document).ready(function () {
+                                                                                ////    // grab all thumbnails and add bootstrap popovers
+                                                                                ////    // https://getbootstrap.com/javascript/#popovers
+                                                                                ////    $('[data-toggle="sdlc"]').popover({
+                                                                                ////        container: 'body',
+                                                                                ////        html: true,
+                                                                                ////        placement: 'auto',
+                                                                                ////        trigger: 'hover',
+                                                                                ////        content: function () {
+                                                                                ////            // get the url for the full size img
+                                                                                ////            var url = $(this).data('full');
+                                                                                ////            return '<img src="' + url + '" style="width:100%;height:auto;">'
+                                                                                ////        }
+                                                                                ////    });
+                                                                                ////});
+
+        </script>
 </body>
 </html>
