@@ -1,4 +1,6 @@
-﻿html, body {
+﻿
+
+html, body {
     /*background-image: url(/images/fzm-corkboard.texture-01.jpg);
             background-position: center center;
             background-repeat: no-repeat;
@@ -18,9 +20,17 @@
     font-size: calc(10px + (15 - 10) * (100vw - 768px) / (1440 - 768));
     /*font-size: calc(.2vw + .09vh + 1.5vmin);*/
     font-weight: 600;
-    color: black;
+    color: saddlebrown;
 }
 
+a {
+    color: sienna;
+}
+
+.btn-primary {
+    color: aqua;
+}
+    
     body .popover {
         max-width: 600px;
         background-color: darkred;
@@ -151,6 +161,8 @@
     color: black;
 }
 
+
+
 .card-header {
     /*background-image: url("../images/Corkboard/wildtextures-rag-paper-seamless-texture.jpg");*/
     background-image: url("../images/Corkboard/paper-brown.jpg");
@@ -220,4 +232,62 @@
 
 .img-responsive {
     width: 100%;
+}
+
+footer{
+    color:black;
+}
+
+input.transparent-input {
+    background-color: transparent !important;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    /*border: none !important;*/
+    
+}
+    input.transparent-input:focus {
+       
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: blue;
+        
+    }
+
+.message {
+    
+    background-image: url('../images/Corkboard/yellow_notebook_paper_No_Vert_Line.jpg');
+}
+
+.button-Paper {
+    
+    background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+
+}
+    .button-Paper.raised {
+        box-shadow: 0 6px 0 0 #007299;
+    }
+    .button-Paper.raised:active, .btn-primary.raised.active {
+        background: #33a6cc;
+        box-shadow: none;
+        margin-bottom: -3px;
+        margin-top: 3px;
+    }
+
+
+
+.validation-summary-errors {
+    border: 2px solid darkred;
+    color: darkred;
+}
+
+.field-validation-error {
+    color: darkred;
+}
+
+.input-validation-error {
+    color: darkred;
 }

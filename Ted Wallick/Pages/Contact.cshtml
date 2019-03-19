@@ -1,19 +1,85 @@
 ﻿@page
+
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<link href="~/css/CorkBoard.css" rel="stylesheet" />
 @model ContactModel
 @{
     ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+<div class="container text-center">
+    <div class="row  mt-5  align-items-center justify-content-md-center ">
+        <div class="col-sm-7" >
+            <div class="card  card-deck-Background">
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-right" alt="...">
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-left" alt="...">
+
+                <h2>@ViewData["Title"]</h2>
+                <h3>@Model.Message</h3>
+            </div>
+            
+            <div class="card img-fluid mt-4 ">
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-right" alt="...">
+                <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-left" alt="...">
+
+                <form class="form form-horizontal m-5 " method="post">
+                    <div asp-validation-summary="All"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-inline form-group">
+                                <label asp-for="Contact.Name" class="col-md-4 col-form-labe">First Name:</label>
+                                <div class="col-md-8 col-md-offset-0 ">
+                                    <input asp-for="Contact.Name" class="form-control transparent-input" style="color:blue;" />
+                                    <span asp-validation-for="Contact.Name"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-inline form-group">
+                                <label asp-for="Contact.LastName" class="col-md-4 col-form-label">Last Name:</label>
+                                <div class="col-md-8 col-md-offset-0 ">
+                                    <input asp-for="Contact.LastName" class="form-control transparent-input" style="color:blue;" />
+                                    <span asp-validation-for="Contact.LastName"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-inline form-group">
+                                <label asp-for="Contact.Email" class="col-md-4 col-form-label">Email:</label>
+                                <div class="col-md-8 col-md-offset-0 ">
+                                    <input asp-for="Contact.Email" class="form-control transparent-input" style="color:blue;" />
+                                    <span asp-validation-for="Contact.Email"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="Contact.Message" class="col-md-4 col-form-label">Your Message:</label>
+                                <div class="col-md-12">
+                                    <textarea asp-for="Contact.Message" rows="6" class="form-control Border-Picture message"></textarea>
+                                    <span asp-validation-for="Contact.Message"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="button-Paper btn-lg">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
