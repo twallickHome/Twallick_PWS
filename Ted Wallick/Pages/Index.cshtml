@@ -67,7 +67,16 @@
                 <div class="card img-fluid mt-4 ">
                     <img class="Thumbtack" src="~/images/Corkboard/Red_push_pin.png" alt="...">
 
-                    <div class="p-5">
+                    <div class=" container " style="width:75%; position:center; ">
+                        <div class="mt-5 mb-3 mr-5 ml-5 pt-3 p-1 message" >
+                            <p>I am programmer</p>
+                            <p style="margin-top: -10px;">Tried and true</p>
+                            <p style="margin-top: -10px;">Solving problems</p>
+                            <p style="margin-top: -10px;">is what I do</p>
+                        </div>
+                    </div>
+
+                    <div class="px-4">
                         <p class="text-left tab ">
                             Microsoft full stack programming is my specialization. Offering exceptional troubleshooting skills with a talent for developing solutions to unusual and difficult problems. Being reliable and efficient guarantees that all jobs will be completed on time, in scope, and within budget.
                         </p>
@@ -231,7 +240,8 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img id="myImage" class="img-responsive" src="" alt="">
+                    
+                    <img id="myImage" class="img-responsive" src="../images/SDLC.png" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger center-block" data-dismiss="modal">close</button>
@@ -320,32 +330,32 @@
             var myImageId = $(this).data('id');
             $(".modal-body #myImage").attr("src", myImageId);
         });
-                                                                                    //$('#myModal').modal()
+                                                                                    $('#myModal').modal()
 
-                                                                                    //$('a[rel=sdlc]').popover({
-                                                                                    //    html: true,
-                                                                                    //    trigger: 'hover',
-                                                                                    //    placement: 'auto',
-                                                                                    //    container: 'body',
-                                                                                    //    content: function () { return '<img src="' + $(this).data('img') + '" width="" />'; }
+                                                                                    $('a[rel=sdlc]').popover({
+                                                                                        html: true,
+                                                                                        trigger: 'hover',
+                                                                                        placement: 'auto',
+                                                                                        container: 'body',
+                                                                                        content: function () { return '<img src="' + $(this).data('img') + '" width="" />'; }
+                                                                                    });
+
+                                                                                     Wait for the web page to be ready
+                                                                                    //$(document).ready(function () {
+                                                                                    //    // grab all thumbnails and add bootstrap popovers
+                                                                                    //    // https://getbootstrap.com/javascript/#popovers
+                                                                                    //    $('[data-toggle="sdlc"]').popover({
+                                                                                    //        container: 'body',
+                                                                                    //        html: true,
+                                                                                    //        placement: 'auto',
+                                                                                    //        trigger: 'hover',
+                                                                                    //        content: function () {
+                                                                                    //            // get the url for the full size img
+                                                                                    //            var url = $(this).data('full');
+                                                                                    //            return '<img src="' + url + '" style="width:100%;height:auto;">'
+                                                                                    //        }
+                                                                                    //    });
                                                                                     //});
-
-                                                                                    // Wait for the web page to be ready
-                                                                                    ////$(document).ready(function () {
-                                                                                    ////    // grab all thumbnails and add bootstrap popovers
-                                                                                    ////    // https://getbootstrap.com/javascript/#popovers
-                                                                                    ////    $('[data-toggle="sdlc"]').popover({
-                                                                                    ////        container: 'body',
-                                                                                    ////        html: true,
-                                                                                    ////        placement: 'auto',
-                                                                                    ////        trigger: 'hover',
-                                                                                    ////        content: function () {
-                                                                                    ////            // get the url for the full size img
-                                                                                    ////            var url = $(this).data('full');
-                                                                                    ////            return '<img src="' + url + '" style="width:100%;height:auto;">'
-                                                                                    ////        }
-                                                                                    ////    });
-                                                                                    ////});
 
     </script>
 </body>

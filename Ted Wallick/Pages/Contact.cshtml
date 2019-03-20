@@ -24,7 +24,7 @@
                 <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-right" alt="...">
                 <img src="~/images/Corkboard/Red_push_pin.png" class="Thumbtack-left" alt="...">
 
-                <form class="form form-horizontal m-5 " method="post">
+                <form class="form form-horizontal mt-5 mb-3 " method="post">
                     <div asp-validation-summary="All"></div>
 
                     <div class="row">
@@ -33,7 +33,7 @@
                                 <label asp-for="Contact.Name" class="col-md-4 col-form-labe">First Name:</label>
                                 <div class="col-md-8 col-md-offset-0 ">
                                     <input asp-for="Contact.Name" class="form-control transparent-input" style="color:blue;" />
-                                    <span asp-validation-for="Contact.Name"></span>
+                                    <span  asp-validation-for="Contact.Name"></span>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label asp-for="Contact.Message" class="col-md-4 col-form-label">Your Message:</label>
                                 <div class="col-md-12">
-                                    <textarea asp-for="Contact.Message" rows="6" class="form-control Border-Picture message"></textarea>
+                                    <textarea asp-for="Contact.Message" rows="6" class="form-control message"></textarea>
                                     <span asp-validation-for="Contact.Message"></span>
                                 </div>
                             </div>
