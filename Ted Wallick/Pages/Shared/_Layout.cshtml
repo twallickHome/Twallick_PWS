@@ -29,20 +29,47 @@
             background-color: tan;
         }
 
-        .nav-item {
+        /*.nav-item {
             color: black;
-        }
-
-        /*div h2{
-            color: black;
-            /*background-image: url('../images/Corkboard/yellow_notebook_paper-600x400.jpg');*/
         }*/
 
+        .nav-style {
+            background-image: url(/images/Corkboard/Brown-Cardboard-Paper-Texture.jpg);
+            -webkit-box-shadow: 0 17px 17px 0 rgba(0,0,0,0.15),0 27px 55px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 17px 17px 0 rgba(0,0,0,0.15),0 27px 55px 0 rgba(0,0,0,0.3);
+            /*border-bottom: 5px solid #9B9B9B;
+            border-top: 5px solid #9B9B9B;*/
+        }
+
+    
+        .button-Paper {
+            margin-left:5px;
+            /*color: rgb(25, 21, 7);*/
+            color:black;
+            font-size: 21px;
+            line-height: 16px;
+            padding:12px;
+            border-radius: 10px;
+            background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+            box-shadow: rgba(0, 0, 0, 0.67) 5px 5px 11px 0px;
+            border: 3px ridge rgb(155, 155, 155);
+            display: inline-block;
+        }
+
+            .myButton:hover {
+                background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+                background: #AF9909;
+            }
+
+            .myButton:active {
+                background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+                background: #F7D60D;
+            }
     </style>
 
 </head>
 <body id="top">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-company-color" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-style" id="mainNav" style="">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#top">Ted Wallick</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation">Menu <i class="fa fa-bars"></i></button>
@@ -61,9 +88,9 @@
                         </div>
                     </li>*@
 
-                    <li class="nav-item"><a asp-page="/Index" class="btn nav-link js-scroll-trigger">Home</a></li>
+                    <li ><a asp-page="/Index" class=" js-scroll-trigger button-Paper">Home</a></li>
                     @*<li class="nav-item"><a asp-page="/About" class="btn nav-link js-scroll-trigger">About</a></li>*@
-                    <li class="nav-item"><a asp-page="/Contact" class="btn nav-link js-scroll-trigger">Contact</a></li>
+                    <li ><a asp-page="/Contact" class=" js-scroll-trigger button-Paper">Contact</a></li>
 
 
                     @*<form class="form-inline my-2 my-lg-0 mr">

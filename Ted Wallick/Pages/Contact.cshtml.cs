@@ -23,7 +23,7 @@ namespace Ted_Wallick.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var mailbody = $@"Hallo website owner, This is a new contact request from your website: Name: {Contact.Name} LastName: {Contact.LastName} Email: {Contact.Email} Message: ""{Contact.Message}"" Cheers, The websites contact form";
+            var mailbody = $@"This is a new contact request from your website:<br><br>First Name: {Contact.Name} <br>LastName: {Contact.LastName} <br>Email: {Contact.Email} <br>Message:<br> ""{Contact.Message}""";
             
 
             if (!ModelState.IsValid)
@@ -43,6 +43,7 @@ namespace Ted_Wallick.Pages
         {
             using (var message = new MailMessage(Contact.Email, "twallick.home@gmail.com"))
             {
+                message.IsBodyHtml = true;
                 message.To.Add(new MailAddress("twallick.home@gmail.com"));
                 message.From = new MailAddress(Contact.Email);
                 message.Subject = "New E-Mail from my website";

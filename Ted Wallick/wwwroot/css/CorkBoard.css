@@ -240,7 +240,7 @@ footer{
 
 input.transparent-input {
     background-color: transparent !important;
-    outline: 0;
+    outline: 1;
     border-width: 0 0 2px;
     border-color: black;
     -webkit-box-shadow: none !important;

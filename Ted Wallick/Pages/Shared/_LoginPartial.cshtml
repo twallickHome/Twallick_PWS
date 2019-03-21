@@ -4,7 +4,29 @@
 @inject UserManager<IdentityUser> UserManager
 
 <style>
-    
+    .button-Paper2 {
+        margin-left: 5px;
+        padding:12px;
+        color: rgb(25, 21, 7);
+        font-size: 21px;
+        line-height: 16px;
+        
+        border-radius: 10px;
+        background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+        box-shadow: rgba(0, 0, 0, 0.67) 5px 5px 11px 0px;
+        border: 3px ridge rgb(155, 155, 155);
+        display: inline-block;
+    }
+
+    .myButton:hover {
+        background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+        background: #AF9909;
+    }
+
+    .myButton:active {
+        background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+        background: #F7D60D;
+    }   
 </style>
 
 @if (SignInManager.IsSignedIn(User))
@@ -12,10 +34,10 @@
     <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right " >
             <li >
-                <a class="btn nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" >Hello @UserManager.GetUserName(User)!</a>
+                <a class="btn nav-link" style="color:black;font-size:21px;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" >@UserManager.GetUserName(User)</a>
             </li>
             <li>
-                <button  type="submit" class="btn  navbar-btn navbar-link">Logout</button>
+                <button  type="submit" class="button-Paper2">Logout</button>
             </li>
         </ul>
     </form>
@@ -23,7 +45,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="Identity" asp-page="/Account/Register" class="btn nav-link js-scroll-trigger">Register</a></li>
-        <li><a asp-area="Identity" asp-page="/Account/Login" class="btn nav-link js-scroll-trigger">Login</a></li>
+        <li><a asp-area="Identity" asp-page="/Account/Register" class="button-Paper2 js-scroll-trigger">Register</a></li>
+        <li><a asp-area="Identity" asp-page="/Account/Login" class="button-Paper2 js-scroll-trigger">Login</a></li>
     </ul>
 }
