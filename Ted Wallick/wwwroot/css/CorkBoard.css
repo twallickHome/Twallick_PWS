@@ -258,7 +258,7 @@ input.transparent-input {
     }
 
 .message {
-    color:blue;
+    color: midnightblue;
     object-fit: cover;
     background-image: url('../images/Corkboard/yellow_notebook_paper_No_Vert_Line.jpg');
     -webkit-box-shadow: 0 17px 17px 0 rgba(0,0,0,0.15),0 27px 55px 0 rgba(0,0,0,0.3);
@@ -267,18 +267,21 @@ input.transparent-input {
 
 .button-Paper {
     background-image: url('../images/Corkboard/Old-Paper-Texture-button.jpg');
+    text-decoration: none;
     /*-webkit-box-shadow: 0 17px 17px 0 rgba(0,0,0,0.15),0 27px 55px 0 rgba(0,0,0,0.3);
     box-shadow: 0 17px 17px 0 rgba(0,0,0,0.15),0 27px 55px 0 rgba(0,0,0,0.3);*/
 }
     .button-Paper.raised {
         box-shadow: 0 6px 0 0 #007299;
+        text-decoration: none;
     }
-    .button-Paper.raised:active, .btn-primary.raised.active {
-        background: #33a6cc;
-        box-shadow: none;
-        margin-bottom: -3px;
-        margin-top: 3px;
-    }
+        .button-Paper.raised:active, .btn-primary.raised.active {
+            text-decoration: none;
+            background: #33a6cc;
+            box-shadow: none;
+            margin-bottom: -3px;
+            margin-top: 3px;
+        }
 
 
 
@@ -302,3 +305,5 @@ div .field-validation-error {
     /*margin-top: -19px;
     margin-bottom: 10px;*/
 }
+
+
